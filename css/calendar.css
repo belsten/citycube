@@ -3,7 +3,7 @@
 }
 
 body {
-    overflow: hidden;
+    overflow: scroll;
     font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-weight: 100;
     color: rgba(255, 255, 255, 1);
