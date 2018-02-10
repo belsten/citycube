@@ -27,6 +27,12 @@ body {
     height: 570px;
     overflow: hidden;
 }
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 
 .header {
     height: 50px;
