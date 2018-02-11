@@ -8,6 +8,13 @@
     top : -10px;
     margin-right: -4.2%;
 }
+#twitterBar{
+     position: absolute;
+     height: 97=%;
+     left: 10px;
+     top: 205px;
+     display: none;
+}
 #newsBar{
       position: absolute;
      height: 97=%;
