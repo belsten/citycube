@@ -1,7 +1,7 @@
 # CITYCUBE
-A web app that allows citys to connect. Currently only implemented for the city of Schenectady. Gets data from Facebook, 
+A web app that allows people to connect in cities. Currently only implemented for the city of Schenectady. Gets data from Facebook, 
 Twitter and Google News. Looking to scale up to getting all public Facebook events for a given city and creating a 
-map and calander based on that data. This would require the implementation of a search function fo find citys.  
+map and calander based on that data. This would require the implementation of a search function fo find cities.  
 
 Accessable through https://citybox.azurewebsites.net as of 02/11/2018.
 
