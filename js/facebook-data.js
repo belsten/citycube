@@ -6,7 +6,7 @@ $(document).ready(function() {
             cookie: true,
             version: 'v2.12' // or v2.1, v2.2, v2.3, ...
         });
-        var accessString = "access_token=EAACEdEose0cBAEWnpzz1nBjESao2eD2vWzsoXlw2yVCGvaf73ZAyo8XGJASZCTiAAVGSbclnzZBdGjfZAvBLjMg3dWZCe7UyaI0vUcVRPcg4U6THD5bqFQS4N2c6rZCMk8PMZBkUtfCK00pNVw6SYxUzdDgcUsZCoCocmMWHhKsa4nZCUhKApohbCuqCbyW7sJ2EZD";
+        var accessString = "access_token=access_token=203163550264882|292a13e4020e34ae7a3718e0e75afc80";
 
         FB.api(
             '/SchenectadyCounty/events?' + accessString,
