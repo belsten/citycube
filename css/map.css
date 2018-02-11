@@ -60,7 +60,16 @@
   height: 20px;
   padding: 15px;
 }
-
+ #topHeader{
+     width: 500%;
+     height: 90px;
+     background: #333333;
+     top : -20px;
+     margin-top:-25px;
+     margin-bottom: 8px;
+     padding: 20px;
+     padding-left: 101px;
+ }
 /* Optional: Makes the sample page fill the window. */
 html, body {
     height: 92%;
