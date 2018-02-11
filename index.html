@@ -47,5 +47,28 @@
       -->
     </footer>
 
+    <div id="newsBar">
+       <div id="rssFeed">
+        <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="64591/"></script> <!-- end feedwind code -->
+        </div>
+    </div>
+    <div id="newsButton" onclick ="showNews()">
+        News
+    </div>
+
+    <script>
+        var isHidden = true;
+        function showNews(){
+           if(isHidden){
+                 document.getElementById("newsBar").style.display = "inline";
+                 isHidden = false;
+           }else{
+                document.getElementById("newsBar").style.display = "none";
+                isHidden = true;
+           }
+        }
+    </script>
+    
+    
 </body>
 </html>
