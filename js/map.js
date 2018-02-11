@@ -71,7 +71,7 @@ function create_facebookMarker(an_event) {
         });
 
   google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent("skajbd")
+    infowindow.setContent('<p style = "color: black";> ' + an_event.name  + '</p>')
     infowindow.open(map, marker);
   });
 }
