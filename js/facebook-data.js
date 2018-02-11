@@ -6,7 +6,7 @@ $(document).ready(function() {
             cookie: true,
             version: 'v2.12' // or v2.1, v2.2, v2.3, ...
         });
-        var accessString = "access_token=access_token=203163550264882|292a13e4020e34ae7a3718e0e75afc80";
+        var accessString = "access_token=359070987892421|-5Lw9ZwOH9haWyVk_ODGl8k3b9o";
 
         FB.api(
             '/SchenectadyCounty/events?' + accessString,

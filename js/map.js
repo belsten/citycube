@@ -66,9 +66,12 @@ function create_facebookMarker(an_event) {
     position: {lat: an_event.place.location.latitude, lng: an_event.place.location.longitude},
     labelContent: "butt"
   });
+  var infowindow = new google.maps.InfoWindow({
+          content: '<div>' + '<p>arker Location:' + 'BUTT' + '</p>' + '</div>'
+        });
 
   google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent(an_event.name);
-    infowindow.open(map, this);
+    infowindow.setContent("skajbd")
+    infowindow.open(map, marker);
   });
 }
