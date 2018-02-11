@@ -248,6 +248,8 @@
             var square = createElement('div', 'event-category ' + 'blue');
 
             var span = createElement('span', '', ev.name);
+            names.push(ev.name);
+            
             document.body.appendChild(span);
 
             div.appendChild(square);
