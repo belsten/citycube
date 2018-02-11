@@ -35,7 +35,7 @@
 
             this.title = createElement('h1');
             var reload_map = createElement('div', 'footerButton');
-            reload_map.innerHTML = 'Reload Events';
+            reload_map.innerHTML = 'Show All Events';
             reload_map.addEventListener('click', function() { initMap(); });
 
             var right = createElement('div', 'right');
