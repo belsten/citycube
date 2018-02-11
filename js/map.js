@@ -27,9 +27,10 @@ function initMap() {
       event_date = event_date[0].split("-");
 
       //check if the event has passed
-      if ( current_date.getYear()  <= parseInt(event_date[0]) ||
-           current_date.getMonth() <= parseInt(event_date[1]) ||
-           current_date.getDate()  <= parseInt(event_date[2]) ){
+      if ( current_date.getYear()   <= parseInt(event_date[0])  &&
+           current_date.getMonth()  <= parseInt(event_date[1])  &&
+          ((current_date.getMonth() == parseInt(event_date[1])) ||
+           (current_date.getDate()  <= parseInt(event_date[2])) )) {
 
            //check if facebook provides the location
            if (obj[i].place.hasOwnProperty('location')) {
