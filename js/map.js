@@ -122,8 +122,8 @@ function create_facebookMarker(an_event) {
   });
 
   google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent('<p style = "color: black";> ' + '<b>' + an_event.name  + '</b>' + '</p> '
-        + '<p style = "color: black";> ' + "Start Time: "  + moment(an_event.start_time).format("hh:mm:ss a")  + '</p> '
+      infowindow.setContent('<a style = "color: black" title = "' + an_event.name + '" href = "https://facebook.com/events/' + an_event.id + '"> ' + '<b>' + an_event.name  + '</b>' + '</a> '
+          + '<p style = "color: black";> ' + "Start Time: "  + moment(an_event.start_time).format("hh:mm:ss a")  + '</p> '
         + '<p style = "color: black";> ' + "End Time: "  + moment(an_event.end_time).format("hh:mm:ss a")  + '</p> ')
     infowindow.open(map, marker);
   });
