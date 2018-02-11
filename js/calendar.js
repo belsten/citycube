@@ -241,7 +241,13 @@
         events.forEach(function(ev) {
             var div = createElement('div', 'event');
             var square = createElement('div', 'event-category ' + 'blue');
-            var span = createElement('span', '', ev.name);
+
+            var span = document.createElement('a');
+            var linkText = document.createTextNode(ev.name);
+            span.appendChild(linkText);
+            span.title = ev.name;
+            span.href = "https://facebook.com/events/"+ev.id;
+            document.body.appendChild(span);
 
             div.appendChild(square);
             div.appendChild(span);
