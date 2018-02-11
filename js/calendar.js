@@ -264,10 +264,6 @@
 
             div.appendChild(span);
             wrapper.appendChild(div);
-            initMap();
-        }
-        else {
-          filterByDate(names);
         }
 
         if(currentWrapper) {
@@ -290,6 +286,12 @@
             });
         } else {
             ele.appendChild(wrapper);
+        }
+        if (!events.length) {
+          initMap();
+        }
+        else {
+          filterByDate(names);
         }
     }
 
