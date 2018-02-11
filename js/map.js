@@ -51,6 +51,47 @@ function initMap() {
     }
 }
 
+function filterByDate(event_date) {
+  var pyrmont = {lat: 42.8142, lng: -73.9396};
+  map = new google.maps.Map(document.getElementById('map'), {
+      center: pyrmont,
+      zoom: 15
+  });
+
+  infowindow = new google.maps.InfoWindow();
+  var service = new google.maps.places.PlacesService(map);
+
+  //get local json data for events
+  text2 = localStorage.getItem("statham");
+  obj = JSON.parse(text2);
+
+  for(i = 0; i < obj.length; i++) {
+
+    //split into array of type ["year", "month", "day"]
+    var obj_date = obj[i].end_time.split("T");
+    obj_date = obj_date[0].split("-");
+
+    //check if the event has passed
+    if (event_date.indexOf(obj[i].name) != -1) {
+
+         //check if facebook provides the location
+         if (obj[i].place.hasOwnProperty('location')) {
+           console.log("Has location");
+           create_facebookMarker(obj[i]);
+         }
+         else {
+           //do a google search based on the name
+           console.log("no location");
+           service.nearbySearch({
+               location: pyrmont,
+               radius: 500,
+               name: obj[i].place.name
+           }, callback);
+         }
+      }
+  }
+}
+
 function callback(results, status) {
   if (status === google.maps.places.PlacesServiceStatus.OK) {
     if (results.length > 0 ) {
@@ -58,6 +99,7 @@ function callback(results, status) {
     }
   }
 }
+
 
 function create_googleMarker(place) {
   var placeLoc = place.geometry.location;

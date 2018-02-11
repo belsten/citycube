@@ -183,7 +183,7 @@
         var details, arrow;
         var dayNumber = +el.querySelectorAll('.day-number')[0].innerText || +el.querySelectorAll('.day-number')[0].textContent;
         var day = this.current.clone().date(dayNumber);
-        
+
         var currentOpened = document.querySelector('.details');
 
         //Check to see if there is an open detais box on the current row
@@ -237,6 +237,7 @@
         //Remove any events in the current details element
         var currentWrapper = ele.querySelector('.events');
         var wrapper = createElement('div', 'events in' + (currentWrapper ? ' new' : ''));
+        var names = [];
 
         events.forEach(function(ev) {
             var div = createElement('div', 'event');
@@ -246,6 +247,8 @@
             var linkText = document.createTextNode(ev.name);
             span.appendChild(linkText);
             span.title = ev.name;
+            names.push(ev.name);
+
             span.href = "https://facebook.com/events/"+ev.id;
             document.body.appendChild(span);
 
@@ -254,12 +257,17 @@
             wrapper.appendChild(div);
         });
 
+
         if(!events.length) {
             var div = createElement('div', 'event empty');
             var span = createElement('span', '', 'No Events');
 
             div.appendChild(span);
             wrapper.appendChild(div);
+            initMap();
+        }
+        else {
+          filterByDate(names);
         }
 
         if(currentWrapper) {
