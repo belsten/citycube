@@ -183,7 +183,7 @@
         var details, arrow;
         var dayNumber = +el.querySelectorAll('.day-number')[0].innerText || +el.querySelectorAll('.day-number')[0].textContent;
         var day = this.current.clone().date(dayNumber);
-
+        
         var currentOpened = document.querySelector('.details');
 
         //Check to see if there is an open detais box on the current row

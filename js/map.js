@@ -77,11 +77,7 @@ function create_facebookMarker(an_event) {
   var marker = new google.maps.Marker({
     map: map,
     position: {lat: an_event.place.location.latitude, lng: an_event.place.location.longitude},
-    labelContent: "butt"
   });
-  var infowindow = new google.maps.InfoWindow({
-          content: '<div>' + '<p>arker Location:' + 'BUTT' + '</p>' + '</div>'
-        });
 
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.setContent('<p style = "color: black";> ' + an_event.name  + '</p>')
