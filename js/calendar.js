@@ -34,7 +34,8 @@
             this.header.className = 'header';
 
             this.title = createElement('h1');
-
+            var reload_map = createElement('div', 'footerButton');
+            reload_map.innerHTML = 'Reload Events';
             var reload_map = createElement('div', 'header');
             reload_map.title = createElement('h2')
             reload_map.title.innerHTML = 'View All Events';
