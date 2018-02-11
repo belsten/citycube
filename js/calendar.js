@@ -287,11 +287,13 @@
         } else {
             ele.appendChild(wrapper);
         }
+
+        //check if there are any events for the day
         if (!events.length) {
-          initMap();
+          initMap();    //no events, show all markers
         }
         else {
-          filterByDate(names);
+          filterByDate(names);    //only display the current days markers
         }
     }
 
