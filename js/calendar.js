@@ -218,7 +218,7 @@
             //Create the event wrapper
 
             details.appendChild(arrow);
-            el.parentNode.appendChild(details);
+            el.parentNode.parentNode.appendChild(details);
         }
 
         var todaysEvents = this.events.reduce(function(memo, ev) {

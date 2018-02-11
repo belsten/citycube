@@ -206,7 +206,7 @@ body {
 
 .arrow {
     position: absolute;
-    top: -5px;
+    bottom: 5px;
     left: 50%;
     margin-left: -2px;
     width: 0px;
