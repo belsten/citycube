@@ -39,7 +39,16 @@
      position: absolute;
      margin-top: 0px;
 }
-
+#twitterButton{
+      position: absolute;
+     height: 30px;
+     margin-left: 15px;
+     left: 0px;
+     width: 50px;
+     padding: 5px;
+     top: 170px;
+     background: #4A4A4A;
+}
 .twitter-timeline{
      margin: 20px;
      position: static;
