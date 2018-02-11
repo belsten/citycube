@@ -56,9 +56,9 @@
 
         this.events.forEach(function(ev) {
             ev.date = moment(ev.start_time);
-            console.log(ev.date.month)
+            //console.log(ev.date.month)
             //ev.date = self.current.clone().date(Math.random() * (29 - 1) + 1);
-            console.log(ev.date)
+            //console.log(ev.date)
         });
 
 
@@ -327,7 +327,7 @@
     json = localStorage.getItem("statham");
     data = JSON.parse(json);
 
-    console.log(data[0]);
+    //console.log(data[0]);
 
     function addDate(ev) {
 

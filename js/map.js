@@ -14,38 +14,61 @@ function initMap() {
 
     infowindow = new google.maps.InfoWindow();
     var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-        location: pyrmont,
-        radius: 500,
-        type: ['store']
-    }, callback);
-}
 
-function callback(results, status) {
+    //get local json data for events
+    text2 = localStorage.getItem("statham");
+    obj = JSON.parse(text2);
+    console.log(obj[0]);
+    console.log(obj[5]);
 
-  //get local json data for events
-  text2 = localStorage.getItem("statham");
-  obj = JSON.parse(text2);
-  console.log(obj[0])
-
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < obj.length; i++) {
-            createMarker(obj[i]);
-            //console.log(obj[i].name)
-        }
+    for(i = 0; i < obj.length; i++) {
+      //console.log(obj);
+      if (obj[i].place.hasOwnProperty('location')) {
+        console.log("Has location");
+        create_facebookMarker(obj[i]);
+      }
+      else {
+        console.log("no location");
+        service.nearbySearch({
+            location: pyrmont,
+            radius: 500,
+            name: obj[i].place.name
+        }, callback);
+      }
     }
 }
 
-function createMarker(an_event) {
-    var placeLoc = an_event.place.location;
-    console.log("lat:", an_event.place.location.latitude, " lng: ",an_event.place.location.longitude)
-    var marker = new google.maps.Marker({
-        map: map,
-        position: {lat: an_event.place.location.latitude, lng: an_event.place.location.longitude},
-        title: "butt"
-    });
-    google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent(an_event.name);
-        infowindow.open(map, this);
-    });
+function callback(results, status) {
+  if (status === google.maps.places.PlacesServiceStatus.OK) {
+    if (results.length > 0 ) {
+        create_googleMarker(results[0]);
+    }
+  }
+}
+
+function create_googleMarker(place) {
+  var placeLoc = place.geometry.location;
+  var marker = new google.maps.Marker({
+    map: map,
+    position: place.geometry.location
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.setContent(place.name);
+    infowindow.open(map, this);
+  });
+}
+
+function create_facebookMarker(an_event) {
+  var placeLoc = an_event.place.location;
+  var marker = new google.maps.Marker({
+    map: map,
+    position: {lat: an_event.place.location.latitude, lng: an_event.place.location.longitude},
+    labelContent: "butt"
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.setContent(an_event.name);
+    infowindow.open(map, this);
+  });
 }
