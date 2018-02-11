@@ -13,19 +13,16 @@ $(document).ready(function() {
             'GET',
             {"limit":"5"},
             function(response) {
-                var text;
-                for(i = 0; i < response.data.length; i++){
-                    text += response.data[i].name + "<br>";
-                }
 
                 //Storing data:
-                events = JSON.stringify(text);
+                events = JSON.stringify(response.data);
                 localStorage.setItem("statham", events);
 
                 //Retrieving data:
                 text2 = localStorage.getItem("statham");
                 obj = JSON.parse(text2);
                 document.getElementById("test").innerHTML = obj;
+                console.log(obj[0].name)
             }
         );
 
