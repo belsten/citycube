@@ -7,3 +7,8 @@ Accessable through https://citybox.azurewebsites.net as of 02/11/2018.
 
 Originally developed at the 2018 \<hack\> tech valley. 
 
+![Current Look](https://github.com/belsten/citycube/blob/map/generalfeatures.png)
+
+![Scalable](https://github.com/belsten/citycube/blob/map/scalability.png)
+
+
