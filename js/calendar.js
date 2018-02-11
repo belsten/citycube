@@ -35,6 +35,11 @@
 
             this.title = createElement('h1');
 
+            var reload_map = createElement('div', 'header');
+            reload_map.title = createElement('h2')
+            reload_map.title.innerHTML = 'View All Events';
+            reload_map.addEventListener('click', function() { initMap(); });
+
             var right = createElement('div', 'right');
             right.addEventListener('click', function() { self.nextMonth(); });
 
@@ -43,6 +48,7 @@
 
             //Append the Elements
             this.header.appendChild(this.title);
+            this.header.appendChild(reload_map);
             this.header.appendChild(right);
             this.header.appendChild(left);
             this.el.appendChild(this.header);
