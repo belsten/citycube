@@ -25,6 +25,7 @@
     <div id="map"></div>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0j_js17SfUNxqXN8HDGs8D_xNtqxKvgs&libraries=places&callback=initMap" async defer></script>
 
+     <div id="twitterBar">
      <a class="twitter-timeline"  href="https://twitter.com/search?q=%40Schenectady" data-partner="tweetdeck"data-widget-id="962530315616047105">@Schenectady</a>
         <script>!function(d,s,id){
           var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
@@ -36,6 +37,8 @@
         }
         (document,"script","twitter-wjs");
         </script>
+    </div>
+    
     <div id="rssFeed">
     <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="64591/"></script> <!-- end feedwind code -->
     </div>
@@ -55,9 +58,21 @@
     <div id="newsButton" onclick ="showNews()">
         News
     </div>
-
+      <div id="twitterButton" onclick ="showTwitter()">
+        Twitter
+    </div>
     <script>
         var isHidden = true;
+        var isTweetHidden = true;
+        function showTwitter(){
+            if(isTweetHidden){
+                 document.getElementById("twitterBar").style.display = "inline";
+                 isTweetHidden = false;
+           }else{
+                document.getElementById("twitterBar").style.display = "none";
+                isTweetHidden = true;
+           }
+        }
         function showNews(){
            if(isHidden){
                  document.getElementById("newsBar").style.display = "inline";
