@@ -294,13 +294,9 @@
             ele.appendChild(wrapper);
         }
 
-        //check if there are any events for the day
-        if (!events.length) {
-          initMap();    //no events, show all markers
-        }
-        else {
-          filterByDate(names);    //only display the current days markers
-        }
+
+        filterByDate(names);    //only display the current days markers
+
     }
 
     Calendar.prototype.drawLegend = function() {
