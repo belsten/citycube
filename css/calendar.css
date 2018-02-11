@@ -22,21 +22,20 @@ body {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    width: 420px;
-    margin: 0 auto;
-    height: 570px;
+    width: 30%;
+    height: 100%;
     overflow: hidden;
 }
 .center {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0px;
+    margin-right: 0px;
     width: 50%;
 }
 
 .header {
     height: 50px;
-    width: 420px;
+    width: 100%;
     background: rgba(66, 66, 66, 1);
     text-align: center;
     position:relative;
@@ -56,8 +55,6 @@ body {
     position: absolute;
     width: 0px;
     height: 0px;
-    border-style: solid;
-    top: 50%;
     margin-top: -7.5px;
     cursor: pointer;
 }
@@ -69,7 +66,6 @@ body {
 }
 
 .right {
-    border-width: 7.5px 0 7.5px 10px;
     border-color: transparent transparent transparent rgba(160, 159, 160, 1);
     right: 20px;
 }
@@ -154,7 +150,7 @@ body {
     list-style: none;
     margin-top: 3px;
     text-align: center;
-    height: 12px;
+    height: 20px;
     line-height: 6px;
     overflow: hidden;
 }
@@ -177,8 +173,8 @@ body {
 
 .details {
     position: relative;
-    width: 420px;
-    height: 75px;
+    width: 100%;
+    height: auto;
     background: rgba(164, 164, 164, 1);
     margin-top: 5px;
     border-radius: 4px;
@@ -198,7 +194,7 @@ body {
 
 .arrow {
     position: absolute;
-    top: -5px;
+    top: 5px;
     left: 50%;
     margin-left: -2px;
     width: 0px;
