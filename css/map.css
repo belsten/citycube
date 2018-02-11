@@ -3,8 +3,10 @@
  * element that contains the map. */
 #map {
     height: 100%;
-    margin: 20px;
-
+    width: 100%;
+    margin-left: 52px;
+    top : -10px;
+    margin-right: -4.2%;
 }
 #rssFeed{
      margin: 20px;
@@ -12,9 +14,20 @@
      position: absolute;
      margin-top: 0px;
 }
+
 .twitter-timeline{
      margin: 20px;
+     position: static;
+     display: inline;
 }
+#mapSearch{
+  position: absolute;
+  top: 160px;
+  left: 10%;
+  height: 20px;
+  padding: 15px;
+}
+
 /* Optional: Makes the sample page fill the window. */
 html, body {
     height: 91.75%;
