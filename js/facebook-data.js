@@ -11,7 +11,7 @@ $(document).ready(function() {
         FB.api(
             '/SchenectadyCounty/events?' + accessString,
             'GET',
-            {"limit":"5"},
+            {"limit":"500"},
             function(response) {
 
                 //Storing data:

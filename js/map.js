@@ -26,7 +26,6 @@ function callback(results, status) {
   //get local json data for events
   text2 = localStorage.getItem("statham");
   obj = JSON.parse(text2);
-  document.getElementById("test").innerHTML = obj;
   console.log(obj[0])
 
     if (status === google.maps.places.PlacesServiceStatus.OK) {
