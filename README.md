@@ -5,5 +5,5 @@ map and calander based on that data. This would require the implementation of a 
 
 Accessable through https://citybox.azurewebsites.net as of 02/11/2018.
 
-Originally developed at the 2018 <hack> tech valley. 
+Originally developed at the 2018 \<hack\> tech valley. 
 
