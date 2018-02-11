@@ -18,11 +18,6 @@ $(document).ready(function() {
                 events = JSON.stringify(response.data);
                 localStorage.setItem("statham", events);
 
-                //Retrieving data:
-                // text2 = localStorage.getItem("statham");
-                // obj = JSON.parse(text2);
-                // document.getElementById("test").innerHTML = obj;
-                // console.log(obj[0])
             }
         );
 

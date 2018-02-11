@@ -22,6 +22,8 @@ function initMap() {
 }
 
 function callback(results, status) {
+
+  //get local json data for events
   text2 = localStorage.getItem("statham");
   obj = JSON.parse(text2);
   document.getElementById("test").innerHTML = obj;
@@ -30,7 +32,7 @@ function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < obj.length; i++) {
             createMarker(obj[i]);
-            console.log(obj[i].name)
+            //console.log(obj[i].name)
         }
     }
 }
