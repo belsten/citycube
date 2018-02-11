@@ -3,6 +3,14 @@
  * element that contains the map. */
 #map {
     height: 100%;
+    margin: 20px;
+
+}
+#rssFeed{
+     margin: 20px;
+}
+.twitter-timeline{
+     margin: 20px;
 }
 /* Optional: Makes the sample page fill the window. */
 html, body {
