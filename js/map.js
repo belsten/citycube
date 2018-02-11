@@ -22,22 +22,29 @@ function initMap() {
 }
 
 function callback(results, status) {
+  text2 = localStorage.getItem("statham");
+  obj = JSON.parse(text2);
+  document.getElementById("test").innerHTML = obj;
+  console.log(obj[0])
+
     if (status === google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < results.length; i++) {
-            createMarker(results[i]);
+        for (var i = 0; i < obj.length; i++) {
+            createMarker(obj[i]);
+            console.log(obj[i].name)
         }
     }
 }
 
-function createMarker(place) {
-    var placeLoc = place.geometry.location;
+function createMarker(an_event) {
+    var placeLoc = an_event.place.location;
+    console.log("lat:", an_event.place.location.latitude, " lng: ",an_event.place.location.longitude)
     var marker = new google.maps.Marker({
         map: map,
-        position: place.geometry.location
+        position: {lat: an_event.place.location.latitude, lng: an_event.place.location.longitude},
+        title: "butt"
     });
-
     google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent(place.name);
+        infowindow.setContent(an_event.name);
         infowindow.open(map, this);
     });
 }
