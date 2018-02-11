@@ -109,7 +109,7 @@ function create_googleMarker(place) {
   });
 
   google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent('<p style = "color: black";> ' + place.name  + '</p>')
+    infowindow.setContent('<p style = "color: black";> ' + '<b>' + place.name  + '</b>' + '</p>')
     infowindow.open(map, this);
   });
 }
@@ -122,7 +122,9 @@ function create_facebookMarker(an_event) {
   });
 
   google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent('<p style = "color: black";> ' + an_event.name  + '</p>')
+    infowindow.setContent('<p style = "color: black";> ' + '<b>' + an_event.name  + '</b>' + '</p> '
+        + '<p style = "color: black";> ' + "Start Time: "  + moment(an_event.start_time).format("hh:mm:ss a")  + '</p> '
+        + '<p style = "color: black";> ' + "End Time: "  + moment(an_event.end_time).format("hh:mm:ss a")  + '</p> ')
     infowindow.open(map, marker);
   });
 }
