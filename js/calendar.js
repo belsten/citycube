@@ -211,7 +211,7 @@
 
             //Create the Details Container
             details = createElement('div', 'details in');
-
+            details.style.height = "150px";
             //Create the arrow
             var arrow = createElement('div', 'arrow');
 
