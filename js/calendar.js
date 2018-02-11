@@ -296,7 +296,7 @@
     Calendar.prototype.drawLegend = function() {
         var legend = createElement('div', 'legend');
         var calendars = this.events.map(function(e) {
-            return 'events' + '|' + 'blue';
+            return 'Schenectady County' + '|' + 'blue';
         }).reduce(function(memo, e) {
             if(memo.indexOf(e) === -1) {
                 memo.push(e);
