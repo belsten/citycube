@@ -9,7 +9,7 @@ $(document).ready(function() {
         var accessString = "access_token=EAACEdEose0cBAEWnpzz1nBjESao2eD2vWzsoXlw2yVCGvaf73ZAyo8XGJASZCTiAAVGSbclnzZBdGjfZAvBLjMg3dWZCe7UyaI0vUcVRPcg4U6THD5bqFQS4N2c6rZCMk8PMZBkUtfCK00pNVw6SYxUzdDgcUsZCoCocmMWHhKsa4nZCUhKApohbCuqCbyW7sJ2EZD";
 
         FB.api(
-            '/Schenectady/events?' + accessString,
+            '/SchenectadyCounty/events?' + accessString,
             'GET',
             {"limit":"5"},
             function(response) {
