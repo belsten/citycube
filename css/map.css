@@ -3,8 +3,8 @@
  * element that contains the map. */
 #map {
     height: 100%;
-    width: 100%;
-    margin-left: 52px;
+    width: 97%;
+    margin-left: 100px;
     top : -10px;
     margin-right: -4.2%;
 }
