@@ -247,13 +247,7 @@
             var div = createElement('div', 'event');
             var square = createElement('div', 'event-category ' + 'blue');
 
-            var span = document.createElement('a');
-            var linkText = document.createTextNode(ev.name);
-            span.appendChild(linkText);
-            span.title = ev.name;
-            names.push(ev.name);
-
-            span.href = "https://facebook.com/events/"+ev.id;
+            var span = createElement('span', '', ev.name);
             document.body.appendChild(span);
 
             div.appendChild(square);
