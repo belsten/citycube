@@ -1,6 +1,6 @@
-# citycube
+# CITYCUBE
 A web app allows citys to connect. Currently only implemented for the city of Schenectady. Gets data from Facebook, 
 Twitter and Google News. Looking to scale up to getting all public Facebook events for a given city and creating a 
-map and calander based on that data. 
+map and calander based on that data. This would require the implementation of a search function fo find citys.  
 Accessable through https://citybox.azurewebsites.net
 
