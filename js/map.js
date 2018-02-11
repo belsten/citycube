@@ -22,19 +22,32 @@ function initMap() {
     console.log(obj[5]);
 
     for(i = 0; i < obj.length; i++) {
-      //console.log(obj);
-      if (obj[i].place.hasOwnProperty('location')) {
-        console.log("Has location");
-        create_facebookMarker(obj[i]);
-      }
-      else {
-        console.log("no location");
-        service.nearbySearch({
-            location: pyrmont,
-            radius: 500,
-            name: obj[i].place.name
-        }, callback);
-      }
+      var current_date = new Date();
+      var event_date = obj[i].end_time.split("T");
+
+      //split into array of type ["year", "month", "day"]
+      event_date = event_date[0].split("-");
+
+      //check if the event has passed
+      if ( current_date.getYear()  <= parseInt(event_date[0]) ||
+           current_date.getMonth() <= parseInt(event_date[1]) ||
+           current_date.getDate()  <= parseInt(event_date[2]) ){
+
+           //check if facebook provides the location
+           if (obj[i].place.hasOwnProperty('location')) {
+             console.log("Has location");
+             create_facebookMarker(obj[i]);
+           }
+           else {
+             //do a google search based on the name
+             console.log("no location");
+             service.nearbySearch({
+                 location: pyrmont,
+                 radius: 500,
+                 name: obj[i].place.name
+             }, callback);
+           }
+        }
     }
 }
 
@@ -54,7 +67,7 @@ function create_googleMarker(place) {
   });
 
   google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent(place.name);
+    infowindow.setContent('<p style = "color: black";> ' + place.name  + '</p>')
     infowindow.open(map, this);
   });
 }
