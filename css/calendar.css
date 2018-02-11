@@ -18,6 +18,15 @@ body {
     user-select: none;
 }
 
+.calendar_class {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    margin-top: -7.5px;
+    cursor: pointer;
+    right: 20px;
+}
+
 #calendar {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
@@ -53,8 +62,10 @@ body {
 
 .left, .right {
     position: absolute;
-    /*width: 0px;
-    height: 0px;*/
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    top: 50%;
     margin-top: -7.5px;
     cursor: pointer;
 }
