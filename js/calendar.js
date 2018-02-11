@@ -260,7 +260,7 @@
 
         if(!events.length) {
             var div = createElement('div', 'event empty');
-            var span = createElement('span', '', 'No Events');
+            var span = createElement('span', '', 'No events on this day' );
 
             div.appendChild(span);
             wrapper.appendChild(div);
