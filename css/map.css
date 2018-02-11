@@ -8,6 +8,9 @@
 }
 #rssFeed{
      margin: 20px;
+     display: inline;
+     position: absolute;
+     margin-top: 0px;
 }
 .twitter-timeline{
      margin: 20px;
