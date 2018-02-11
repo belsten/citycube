@@ -7,20 +7,21 @@
     margin-left: 0px;
     top : -10px;
     margin-right: -4.2%;
+    left: 20px;
 }
 #twitterBar{
      position: absolute;
-     height: 97=%;
-     left: 10px;
-     top: 205px;
+     height: 97%;
+     left: 40px;
+     top: 175px;
      display: none;
 }
 #newsBar{
       position: absolute;
      height: 97=%;
-     left: 10px;
+     left: 17px;
      width: 20px;
-     top: 170px;
+     top: 130px;
      display: none;
 }
 #newsButton{
@@ -30,7 +31,8 @@
      left: 0px;
      width: 40px;
      padding: 5px;
-     top: 175px;
+     top: 125px;
+    left: 20px;
      background: rgba(0, 0, 0, 0);
 }
 #rssFeed{
@@ -38,14 +40,15 @@
      display: inline;
      position: absolute;
      margin-top: 0px;
+    left: 25px;
 }
 #twitterButton{
       position: absolute;
      height: 40px;
-     left: 0px;
+     left: 20px;
      width: 40px;
      padding: 5px;
-     top: 210px;
+     top: 160px;
      background: rgba(0, 0, 0, 0);
 }
 .twitter-timeline{
