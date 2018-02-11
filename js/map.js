@@ -18,8 +18,6 @@ function initMap() {
     //get local json data for events
     text2 = localStorage.getItem("statham");
     obj = JSON.parse(text2);
-    console.log(obj[0]);
-    console.log(obj[5]);
 
     for(i = 0; i < obj.length; i++) {
       var current_date = new Date();
@@ -35,12 +33,10 @@ function initMap() {
 
            //check if facebook provides the location
            if (obj[i].place.hasOwnProperty('location')) {
-             console.log("Has location");
              create_facebookMarker(obj[i]);
            }
            else {
              //do a google search based on the name
-             console.log("no location");
              service.nearbySearch({
                  location: pyrmont,
                  radius: 500,
@@ -76,12 +72,10 @@ function filterByDate(event_date) {
 
          //check if facebook provides the location
          if (obj[i].place.hasOwnProperty('location')) {
-           console.log("Has location");
            create_facebookMarker(obj[i]);
          }
          else {
            //do a google search based on the name
-           console.log("no location");
            service.nearbySearch({
                location: pyrmont,
                radius: 500,
