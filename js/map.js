@@ -24,7 +24,6 @@ function initMap() {
 function callback(results, status) {
   text2 = localStorage.getItem("statham");
   obj = JSON.parse(text2);
-  document.getElementById("test").innerHTML = obj;
   console.log(obj[0])
 
     if (status === google.maps.places.PlacesServiceStatus.OK) {
